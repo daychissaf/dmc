@@ -64,6 +64,13 @@ import {TablesMainComponent} from './DemoPages/Tables/tables-main/tables-main.co
 import {ControlsComponent} from './DemoPages/Forms/Elements/controls/controls.component';
 import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.component';
 import {ProjectComponent} from "./dmc/system/project/project.component";
+import {ProjectService} from "./dmc/system/project/project.service";
+import {AssociationService} from "./dmc/system/association/association.service";
+import {AssociationComponent} from "./dmc/system/association/association.component";
+import {ListComponent} from "./Layout/Components/list/list.component";
+import {CreateComponent} from "./Layout/Components/create/create.component";
+import {LoginComponent} from "./Layout/pages/login.component";
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -116,7 +123,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LayoutComponent,
 
     // DMC
+    LoginComponent,
     ProjectComponent,
+    AssociationComponent,
+    ListComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -149,6 +160,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       // DEFAULT_DROPZONE_CONFIG,
     },
     ConfigActions,
+    ProjectService,
+    AssociationService,
   ],
   bootstrap: [AppComponent]
 })

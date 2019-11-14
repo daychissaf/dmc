@@ -26,6 +26,8 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 
 //DMC
 import {ProjectComponent} from "./dmc/system/project/project.component";
+import {AssociationComponent} from "./dmc/system/association/association.component";
+import {LoginComponent} from "./Layout/pages/login.component";
 
 const routes: Routes = [
   {
@@ -53,6 +55,7 @@ const routes: Routes = [
 
       //DMC
       {path: 'system/projects', component: ProjectComponent, data: {extraParameter: 'formElementsMenu'}},
+      {path: 'system/associations', component: AssociationComponent, data: {extraParameter: 'formElementsMenu'}},
     ]
 
   },
@@ -60,6 +63,8 @@ const routes: Routes = [
     path: '',
     component: PagesLayoutComponent,
     children: [
+      //Login page
+      {path: 'login', component: LoginComponent, data: {extraParameter: ''}},
     ]
   },
   {path: '**', redirectTo: ''}
